@@ -1,0 +1,52 @@
+#aaa {
+    background-image: conic-gradient(at 59% 35%, #e9b362, #c8cbcc, #5c3c97);
+}
+
+#bbb{
+    text-shadow: 2px 2px 5px darkgrey;
+}
+
+#mensajes{
+    width: 100%;
+    height: 100%;
+}
+
+#imgfondo{
+    width: 30%;
+    height: 30%;
+}
+
+#servicios-precios{
+    background-image: conic-gradient(from 120deg at 65%, #e9b362, #c8cbcc, #5c3c97);
+}
+
+#FacilC{
+    background-color: #c8cbcc;
+}
+
+#CreaTu{
+    background-image: conic-gradient(from 210deg at 35%, #e9b362, #c8cbcc, #5c3c97);
+}
+
+#button{
+    background-color: #232d31;
+}
+
+//background-image: conic-gradient(at 59% 35%, #b9706b, #2A363B, #7a9479);
+
+//background-image: conic-gradient(from 120deg at 65%, #b9706b, #2A363B, #7a9479);
+
+//background-color: #232d31;
+
+//background-image: conic-gradient(from 210deg at 35%, #b9706b, #2A363B, #7a9479);
+
+.div-3 {
+    float: left;
+    margin: 10px;/* El div ocupará el 25% del ancho total */
+  }
+  
+  .div-resto {
+    overflow: hidden;
+    width: calc(75% - 10px); /* El div ocupará el 75% restante menos el espacio de separación deseado */
+    margin-left: 10px; /* Espacio de separación entre los divs */
+  }
