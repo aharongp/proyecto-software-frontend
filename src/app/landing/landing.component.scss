@@ -1,8 +1,8 @@
-#aaa {
+#home-desing {
     background-image: conic-gradient(at 59% 35%, #e9b362, #c8cbcc, #5c3c97);
 }
 
-#bbb{
+#txt{
     text-shadow: 2px 2px 5px darkgrey;
 }
 
@@ -44,7 +44,7 @@
     float: left;
     margin: 10px;/* El div ocupará el 25% del ancho total */
   }
-  
+
   .div-resto {
     overflow: hidden;
     width: calc(75% - 10px); /* El div ocupará el 75% restante menos el espacio de separación deseado */
