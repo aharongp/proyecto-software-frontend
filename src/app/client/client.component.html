@@ -1,0 +1,21 @@
+<app-client-nav></app-client-nav>
+<body>
+  <div class="card margin">
+      <div>
+          <h2 class="text-center">Hacer pedido</h2>
+      </div>
+      <form class="form" (ngSubmit)="postOrder()">
+          <input for="titlte" id="tittle" [(ngModel)]="title" class="form-control" type="text" placeholder="Titulo del pedido" aria-label="readonly input example">
+          <div class="input_container split">
+              <input for="typeOrder" id="typeOrder" [(ngModel)]="typeOrder" class="form-control" type="text" placeholder="Tipo de pedido (example: landing page, ecoomerce, Web app, etc)" aria-label="readonly input example">
+              <input for="img" id="img" [(ngModel)]="img" class="form-control" type="text" placeholder="Url de ejemplo (opcional)" aria-label="readonly input example">
+          </div>
+          <input for="description" id="description" [(ngModel)]="description" class="form-control" type="text" placeholder="descripcion completa" aria-label="readonly input example">
+          <button type="submit" class="checkout" style="cursor: pointer;">
+            <span>Hacer pedido</span>
+          </button>
+      </form>
+  </div>
+</body>
+<app-orders-client></app-orders-client>
+

@@ -1,0 +1,51 @@
+<nav id="navbar-main" class="bg-gradient-default navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned" #navbar>
+  <div class="container ">
+    <a class="navbar-brand mr-lg-5" [routerLink]="['/client/' + userId]">
+      <img src="./assets/img/brand/easyweb-lite.png" width="100">
+    </a>
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+          [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbar_global" [ngbCollapse]="isCollapsed">
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a [routerLink]="['/client/' + userId]">
+              <img src="./assets/img/brand/easyweb-lite.png">
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button type="button" class="navbar-toggler" (click)="isCollapsed = !isCollapsed"
+                  [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" [routerLink]="['/client/' + userId]">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text">Inicio</span>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a [routerLink]="['/client/orders/' + userId]" class="nav-link no-caret" data-toggle="dropdown" role="button">
+            <i class="ni ni-collection d-lg-none"></i>
+            <span class="nav-link-inner--text">Pedidos</span>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a [routerLink]="['/client/chat/' + userName]" class="nav-link no-caret" data-toggle="dropdown" role="button">
+            <i class="ni ni-collection d-lg-none"></i>
+            <span class="nav-link-inner--text">Chat</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

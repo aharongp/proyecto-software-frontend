@@ -1,0 +1,27 @@
+<body class="bg-gradient-default">
+  <app-admin-nav></app-admin-nav>
+  <div class="margin" style="display: flex; flex-wrap: wrap;">
+    <div *ngFor="let order of orders" style="margin: 10px;">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          order #{{ order.id }}: {{ order.title }}
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>{{ order.typeOrder }}</strong></li>
+
+          <li class="list-group-item">
+            <strong>description:</strong>
+            <br>
+            {{ order.description }}
+          </li>
+
+          <li class="list-group-item">
+            <strong>client id:</strong>
+            {{ order.clientId }}
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>

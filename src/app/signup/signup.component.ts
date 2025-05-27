@@ -1,16 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
     selector: 'app-signup',
     templateUrl: './signup.component.html',
     styleUrls: ['./signup.component.scss']
 })
-export class SignupComponent implements OnInit {
-    test : Date = new Date();
-    focus;
-    focus1;
-    focus2;
-    constructor() { }
+export class SignupComponent {
+  username: string;
+  email: string;
+  password: string;
 
-    ngOnInit() {}
+
+  constructor(private appService: AppService) { }
+
+  register() {
+    this.appService.register(this. username, this.email, this.password)
+      .subscribe((response: any) => {
+        console.log(response);
+
+      }, error => {
+        console.error(error, 'ocurrio un problema')
+      });
+
+  }
 }

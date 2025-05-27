@@ -1,0 +1,49 @@
+<footer class="footer" [ngClass]="{'has-cards': getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login'}">
+  <div class="container">
+    <div class="row row-grid align-items-center" [ngClass]="{'my-md': getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login', 'mb-5':getPath()==='/user-profile' || getPath()==='/register' || getPath()==='/login'}">
+      <div class="col-lg-6">
+        <h3 class="text-primary font-weight-light mb-2">Gracias por visitarnos!!</h3>
+        <h4 class="mb-0 font-weight-light">Comunicate con nosotros por cualquiera de estas plataformas</h4>
+      </div>
+      <div class="col-lg-6 text-lg-center btn-wrapper">
+        <a target="_blank" href="https://twitter.com/" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" ngbTooltip="Siguenos">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a target="_blank" href="https://www.facebook.com/" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" ngbTooltip="Me gusta">
+          <i class="fa fa-facebook-square"></i>
+        </a>
+        <a target="_blank" href="https://dribbble.com/" class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round" ngbTooltip="Siguenos">
+          <i class="fa fa-dribbble"></i>
+        </a>
+        <a target="_blank" href="https://github.com/" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" ngbTooltip="Estrella en GitHub">
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+    </div>
+    <hr>
+    <div class="row align-items-center justify-content-md-between">
+      <div class="col-md-6">
+        <div class="copyright">
+          &copy; {{test | date: 'yyyy'}}
+          <a href="" target="_blank">Aharon&Ali</a>.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <ul class="nav nav-footer justify-content-end">
+          <li class="nav-item">
+            <a href="" class="nav-link" target="_blank">Aharon&Ali</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/about']" class="nav-link" target="_blank">Sobre nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/about']" class="nav-link" target="_blank">Testimonios</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/about']" class="nav-link" target="_blank">Proyectos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

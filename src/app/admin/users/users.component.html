@@ -1,0 +1,17 @@
+<body class="bg-gradient-default">
+  <app-admin-nav></app-admin-nav>
+  <div class="margin" style="display: flex; flex-wrap: wrap;">
+    <div *ngFor="let user of users" style="margin: 10px;">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          user #{{ user.id }}: {{ user.username }}
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>{{ user.email }}</strong></li>
+          <li class="list-group-item">role: {{ user.rolId }}</li>
+          <li class="list-group-item"> <a [routerLink]="['/client/chat/' + user.username]">chatear</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>

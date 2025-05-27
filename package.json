@@ -29,8 +29,11 @@
     "jw-bootstrap-switch-ng2": "^2.0.5",
     "moment": "^2.29.4",
     "ng2-nouislider": "^2.0.0",
+    "ngx-cookie-service": "^17.0.0",
+    "ngx-socket-io": "^4.6.1",
     "nouislider": "^15.7.1",
     "rxjs": "^7.8.1",
+    "socket.io-client": "^4.7.2",
     "zone.js": "^0.13.1"
   },
   "devDependencies": {
