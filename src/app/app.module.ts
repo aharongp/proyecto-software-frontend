@@ -13,7 +13,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 
 import { LoginComponent } from './login/login.component';
 import { ServicesProductComponent } from './services-product/services-product.component';
-import { BuyComponent } from './buy/buy.component';
+
 
 
 @NgModule({
@@ -25,9 +25,7 @@ import { BuyComponent } from './buy/buy.component';
     NavbarComponent,
 
     LoginComponent,
-    PricingComponent,
     ServicesProductComponent,
-    BuyComponent,
   ],
   imports: [
     BrowserModule,
