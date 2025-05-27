@@ -18,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { ServicesProductComponent } from './services-product/services-product.component';
 import { BuyComponent } from './buy/buy.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { BuyComponent } from './buy/buy.component';
     PricingComponent,
     ServicesProductComponent,
     BuyComponent,
+    UsuariosComponent,
   ],
   imports: [
     BrowserModule,
