@@ -50,3 +50,15 @@
     width: calc(75% - 10px); /* El div ocupará el 75% restante menos el espacio de separación deseado */
     margin-left: 10px; /* Espacio de separación entre los divs */
   }
+
+  .bg-light-purple {
+    background-color: #ffe082 ; /* A shade of light purple */
+    border-color: none;
+    /* You might also want to adjust text color for contrast if needed */
+    color: #333; /* Example: dark grey text */
+}
+
+.bg-light-purple:hover {
+    background-color: #A97CC0; /* Un púrpura un poco más oscuro o diferente al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+}
