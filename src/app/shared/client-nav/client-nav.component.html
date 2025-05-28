@@ -1,4 +1,4 @@
-<nav id="navbar-main" class="bg-gradient-default navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned" #navbar>
+<nav id="navbar-main" class="bg-gradient-transparent navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned" #navbar>
   <div class="container ">
     <a class="navbar-brand mr-lg-5" [routerLink]="['/client/' + userId]">
       <img src="./assets/img/brand/easyweb-lite.png" width="100">
@@ -36,13 +36,6 @@
           <a [routerLink]="['/client/orders/' + userId]" class="nav-link no-caret" data-toggle="dropdown" role="button">
             <i class="ni ni-collection d-lg-none"></i>
             <span class="nav-link-inner--text">Pedidos</span>
-          </a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a [routerLink]="['/client/chat/' + userName]" class="nav-link no-caret" data-toggle="dropdown" role="button">
-            <i class="ni ni-collection d-lg-none"></i>
-            <span class="nav-link-inner--text">Chat</span>
           </a>
         </li>
       </ul>

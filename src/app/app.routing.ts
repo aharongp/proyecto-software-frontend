@@ -8,12 +8,12 @@ import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { ServicesProductComponent } from './services-product/services-product.component';
-import { ChatComponent } from './client/chat/chat.component';
 import { OrdersComponentClient } from './client/orders/orders.component';
 import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
 import { OrdersComponentAdmin  as orderAdmin} from './admin/orders/orders.component';
-import { UsersComponent } from './admin/users/users.component';
+import { UsersComponent } from './admin/users/users.component'; 
+
 
 
 
@@ -24,7 +24,6 @@ const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
     { path: 'login',          component: LoginComponent },
     { path: 'servicesproducts',          component: ServicesProductComponent },
-    { path: 'client/chat/:room',          component: ChatComponent },
     { path: 'client/orders/:id',          component: OrdersComponentClient },
     { path: 'client/:id',          component: ClientComponent },
     { path: 'admin/orders',          component: orderAdmin },

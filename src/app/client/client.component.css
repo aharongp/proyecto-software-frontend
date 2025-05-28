@@ -2,9 +2,7 @@
 body{
   height: 100vh;
   overflow: hidden;
-  background: #0f0c29;
-  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background-image: conic-gradient(from 90deg at 70%, #e9b362, #c8cbcc, #5c3c97);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,7 +104,7 @@ body{
   letter-spacing: 0.05em;
   border-radius: 0.8em;
   border: none;
-  background: #302b63;
+  background: #aebb75;
   color: ghostwhite;
   overflow: hidden;
 }
@@ -127,7 +125,7 @@ body{
 }
 .checkout::before {
   content: "";
-  background: #000;
+  background: #1f0c3a;
   width: 120%;
   left: -10%;
   transform: skew(30deg);
@@ -139,3 +137,4 @@ body{
 .checkout:active {
   transform: scale(0.95);
 }
+

@@ -7,3 +7,33 @@
   flex-wrap: wrap;
   display: flex;
 }
+
+body{
+    height: 100vh;
+  overflow: hidden;
+  background-image: conic-gradient(from 405deg at 90%, #5c3c97, #c8cbcc, #e9b362);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+}
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#chatear{
+    color: #804726;
+    text-align: center;
+}
+#chatear:hover{
+    color: #000000;
+}
+
+.card-header{
+    text-align: center;
+}

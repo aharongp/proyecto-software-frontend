@@ -1,6 +1,5 @@
-
-<body class="bg-gradient-default">
-  <app-client-nav></app-client-nav>
+<app-client-nav></app-client-nav>
+<body>
   <div class="margin" style="display: flex; flex-wrap: wrap;">
     <div *ngFor="let order of orders" style="margin: 10px;">
       <div class="card" style="width: 18rem;">
@@ -19,7 +18,7 @@
             <strong>client id:</strong>
             {{ order.clientId }}</li>
 
-          <a class="list-group-item" [routerLink]="['/client/chat/' + userName]">chatear</a>
+          <a id="chatear"  class="list-group-item" [routerLink]="['/client/chat/' + userName]">chatear</a>
         </ul>
       </div>
     </div>

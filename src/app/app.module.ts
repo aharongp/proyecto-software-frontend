@@ -15,7 +15,6 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { ServicesProductComponent } from './services-product/services-product.component';
 import { OrdersComponentClient } from './client/orders/orders.component';
-import { ChatComponent } from './client/chat/chat.component';
 import { UsersComponent } from './admin/users/users.component';
 import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
@@ -34,7 +33,6 @@ import { OrdersComponentAdmin } from './admin/orders/orders.component';
     LoginComponent,
     ServicesProductComponent,
     OrdersComponentClient,
-    ChatComponent,
     UsersComponent,
     ClientComponent,
     AdminComponent,
