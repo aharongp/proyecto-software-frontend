@@ -12,3 +12,8 @@
     0%{transform:scale(.5)} 
     100%{transform:scale(1)} 
 }
+
+#services{
+    background-image: conic-gradient(from 120deg at 65%,  #5c3c97, #c8cbcc, #e9b362);
+    background-blend-mode: overlay;
+}

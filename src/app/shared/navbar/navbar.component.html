@@ -1,4 +1,4 @@
-<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned" #navbar>
+<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom-pinned" #navbar>
   <div class="container ">
     <a class="navbar-brand mr-lg-5" [routerLink]="['/']">
       <img src="./assets/img/brand/easyweb-lite.png" width="100">
@@ -33,43 +33,15 @@
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link no-caret" href="#nosotros" data-toggle="dropdown" role="button">
-            <i class="ni ni-ui-04 d-lg-none"></i>
-            <span class="nav-link-inner--text">Acerca de nosotros</span>
-          </a>
-        </li>
-
-
-
-
-        <li class="nav-item dropdown">
-          <a [routerLink]="['/pricing']" class="nav-link no-caret" data-toggle="dropdown" role="button">
+          <a [routerLink]="['/servicesproducts']" class="nav-link no-caret" data-toggle="dropdown" role="button">
             <i class="ni ni-collection d-lg-none"></i>
-            <span class="nav-link-inner--text">Precios</span>
+            <span class="nav-link-inner--text">Catalogo</span>
           </a>
         </li>
 
 
       </ul>
       <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-        <li class="nav-item">
-          <a class="nav-link nav-link-icon" href="https://www.instagram.com/" target="_blank" data-toggle="tooltip" title="Follow us on Instagram">
-            <i class="fa fa-instagram"></i>
-            <span class="nav-link-inner--text d-lg-none">Instagram</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link-icon" href="https://twitter.com/" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
-            <i class="fa fa-twitter-square"></i>
-            <span class="nav-link-inner--text d-lg-none">Twitter</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link-icon" href="https://github.com/" target="_blank" data-toggle="tooltip" title="Star us on Github">
-            <i class="fa fa-github"></i>
-            <span class="nav-link-inner--text d-lg-none">Github</span>
-          </a>
-        </li>
         <li class="nav-item d-none d-lg-block ml-lg-4">
           <a [routerLink]="'/login' "class="btn btn-neutral btn-icon">
             <span class="btn-inner--icon">

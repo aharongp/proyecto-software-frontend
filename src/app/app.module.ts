@@ -10,15 +10,10 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
-import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { FooterComponent } from './shared/footer/footer.component';
 
-import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
-import { PricingComponent } from './pricing/pricing.component';
 import { ServicesProductComponent } from './services-product/services-product.component';
-import { BuyComponent } from './buy/buy.component';
 import { OrdersComponentClient } from './client/orders/orders.component';
 import { ChatComponent } from './client/chat/chat.component';
 import { UsersComponent } from './admin/users/users.component';
@@ -36,11 +31,8 @@ import { OrdersComponentAdmin } from './admin/orders/orders.component';
     LandingComponent,
     ProfileComponent,
     NavbarComponent,
-    FooterComponent,
     LoginComponent,
-    PricingComponent,
     ServicesProductComponent,
-    BuyComponent,
     OrdersComponentClient,
     ChatComponent,
     UsersComponent,
@@ -56,7 +48,6 @@ import { OrdersComponentAdmin } from './admin/orders/orders.component';
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    HomeModule,
     HttpClientModule
   ],
   providers: [],
