@@ -7,7 +7,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
-import { ServicesProductComponent } from './services-product/services-product.component';
 import { OrdersComponentClient } from './client/orders/orders.component';
 import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
@@ -21,7 +20,6 @@ const routes: Routes =[
     { path: 'register',           component: SignupComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'login',          component: LoginComponent },
-    { path: 'servicesproducts',          component: ServicesProductComponent },
     { path: 'client/orders/:id',          component: OrdersComponentClient },
     { path: 'client/createorders/:id',          component: FormComponent },
     { path: 'client/:id',          component: ClientComponent },

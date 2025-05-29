@@ -13,7 +13,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
 import { LoginComponent } from './login/login.component';
-import { ServicesProductComponent } from './services-product/services-product.component';
 import { OrdersComponentClient } from './client/orders/orders.component';
 import { UsersComponent } from './admin/users/users.component';
 import { ClientComponent } from './client/client.component';
@@ -33,7 +32,6 @@ import { FormCatalogoComponent } from './admin/form-catalogo/form-catalogo.compo
     ProfileComponent,
     NavbarComponent,
     LoginComponent,
-    ServicesProductComponent,
     OrdersComponentClient,
     UsersComponent,
     ClientComponent,

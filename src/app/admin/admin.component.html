@@ -9,8 +9,7 @@
                 <div class="card-body py-5">
                   <h6 class="text-primary text-uppercase">{{ page.titulo}}</h6>
                   <p class="description mt-3">{{page.description}}</p>
-                  <a href="{{page.url}}" fragment="corp" class="btn btn-primary mt-4">Visitar sitio</a>
-                  <form (ngSubmit)="deletePage(page.id)" action="submit">
+                  <a href="{{page.url}}" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-4">Visitar sitio</a> <form (ngSubmit)="deletePage(page.id)" action="submit">
                     <button  type="submit" class="btn btn-danger mt-4" style="cursor: pointer;">
                       <span>ELIMINAR</span>
                     </button>
@@ -23,4 +22,3 @@
       </div>
   </section>
 </body>
-<app-users></app-users>
