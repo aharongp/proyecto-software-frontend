@@ -37,3 +37,8 @@ body{
 .card-header{
     text-align: center;
 }
+
+#usuarios{
+  margin-top: -20vh;
+  color: #1f0c3a;
+}

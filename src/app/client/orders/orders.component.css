@@ -167,3 +167,7 @@ body{
   transform: scale(0.95);
 }
 
+#pedidos{
+  margin-top: -20vh;
+  color: #1f0c3a;
+}
