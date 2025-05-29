@@ -13,10 +13,7 @@ import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
 import { OrdersComponentAdmin  as orderAdmin} from './admin/orders/orders.component';
 import { UsersComponent } from './admin/users/users.component'; 
-
-
-
-
+import { CatalogoComponent } from './catalogo/catalogo.component';
 
 const routes: Routes =[
     { path: 'user-profile',     component: ProfileComponent },
@@ -29,7 +26,7 @@ const routes: Routes =[
     { path: 'admin/orders',          component: orderAdmin },
     { path: 'admin/users',          component: UsersComponent },
     { path: 'admin',          component: AdminComponent },
-
+    { path: 'catalogo', component: CatalogoComponent },
     { path: '', redirectTo: 'landing', pathMatch: 'full' }
 ];
 

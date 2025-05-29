@@ -1,0 +1,6 @@
+<h2>Catálogo</h2>
+<div *ngFor="let item of catalogo">
+  <h3>{{ item.titulo }}</h3>
+  <p>{{ item.description }}</p>
+  <a [href]="item.url" target="_blank">Ver más</a>
+</div>

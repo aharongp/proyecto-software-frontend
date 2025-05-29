@@ -21,6 +21,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminNavComponent } from './shared/admin-nav/admin-nav.component';
 import { ClientNavComponent } from './shared/client-nav/client-nav.component';
 import { OrdersComponentAdmin } from './admin/orders/orders.component';
+import { CatalogoComponent } from './catalogo/catalogo.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { OrdersComponentAdmin } from './admin/orders/orders.component';
     AdminComponent,
     AdminNavComponent,
     ClientNavComponent,
-    OrdersComponentAdmin
+    OrdersComponentAdmin,
+    CatalogoComponent
   ],
   imports: [
     BrowserModule,

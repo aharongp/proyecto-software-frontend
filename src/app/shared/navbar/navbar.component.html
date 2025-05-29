@@ -26,20 +26,20 @@
       </div>
       <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
         <li class="nav-item dropdown">
-          <a class="nav-link no-caret" data-toggle="dropdown" role="button" [routerLink]="['/']">
-            <i class="ni ni-ui-04 d-lg-none"></i>
+          <a class="nav-link no-caret" [routerLink]="['/']">
             <span class="nav-link-inner--text">Inicio</span>
           </a>
         </li>
-
         <li class="nav-item dropdown">
-          <a [routerLink]="['/servicesproducts']" class="nav-link no-caret" data-toggle="dropdown" role="button">
-            <i class="ni ni-collection d-lg-none"></i>
-            <span class="nav-link-inner--text">Catalogo</span>
+          <a class="nav-link no-caret" [routerLink]="['/servicesproducts']">
+            <span class="nav-link-inner--text">Información</span>
           </a>
         </li>
-
-
+        <li class="nav-item dropdown">
+          <a class="nav-link no-caret" [routerLink]="['/catalogo']">
+            <span class="nav-link-inner--text">Catálogo</span>
+          </a>
+        </li>
       </ul>
       <ul class="navbar-nav align-items-lg-center ml-lg-auto">
         <li class="nav-item d-none d-lg-block ml-lg-4">
