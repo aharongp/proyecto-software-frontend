@@ -25,12 +25,7 @@
         </div>
       </div>
       <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-        <li class="nav-item dropdown">
-          <a class="nav-link no-caret" data-toggle="dropdown" role="button" [routerLink]="['../../landing']">
-            <i class="ni ni-ui-04 d-lg-none"></i>
-            <span class="nav-link-inner--text">Inicio</span>
-          </a>
-        </li>
+
         <li class="nav-item dropdown">
           <a class="nav-link no-caret" data-toggle="dropdown" role="button" [routerLink]="['/client/' + userId]">
             <i class="ni ni-ui-04 d-lg-none"></i>
@@ -49,7 +44,12 @@
             <span class="nav-link-inner--text">Pedidos</span>
           </a>
         </li>
-
+        <li class="nav-item dropdown">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" [routerLink]="['../../landing']">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text">Cerrar sesion</span>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
