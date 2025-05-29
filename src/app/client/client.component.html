@@ -1,21 +1,19 @@
 <app-client-nav></app-client-nav>
 <body>
-  <div class="">
-      <div class="mt-5 ">
-          <h2 class="text-center">Crear pedido</h2>
+  <section class="section section-lg  pt-lg-0 ">
+    <div class="container">
+      <div class=" justify-content-center">
+          <div *ngFor="let page of pages" class="">
+              <div  class="card card-lift--hover shadow border-0 mt-5 mb-2">
+                <div class="card-body py-5">
+                  <h6 class="text-primary text-uppercase">{{ page.titulo}}</h6>
+                  <p class="description mt-3">{{page.description}}</p>
+                  <a href="{{page.url}}" fragment="corp" class="btn btn-primary mt-4">Visitar sitio</a>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
-      <form class="form" (ngSubmit)="postOrder()">
-          <input for="titlte" id="tittle" [(ngModel)]="title" class="form-control" type="text" placeholder="Titulo del pedido" aria-label="readonly input example">
-          <div class="input_container split">
-              <input for="typeOrder" id="typeOrder" [(ngModel)]="typeOrder" class="form-control" type="text" placeholder="Tipo de pedido (example: landing page, ecoomerce, Web app, etc)" aria-label="readonly input example">
-              <input for="img" id="img" [(ngModel)]="img" class="form-control" type="text" placeholder="Url de ejemplo (opcional)" aria-label="readonly input example">
-          </div>
-          <input for="description" id="description" [(ngModel)]="description" class="form-control" type="text" placeholder="descripcion completa" aria-label="readonly input example">
-          <button type="submit" class="checkout" style="cursor: pointer;">
-            <span>ENVIAR</span>
-          </button>
-      </form>
-  </div>
+  </section>
 </body>
-<app-orders-client></app-orders-client>
 

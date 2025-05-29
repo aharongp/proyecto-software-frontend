@@ -12,8 +12,9 @@ import { OrdersComponentClient } from './client/orders/orders.component';
 import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
 import { OrdersComponentAdmin  as orderAdmin} from './admin/orders/orders.component';
-import { UsersComponent } from './admin/users/users.component'; 
-import { CatalogoComponent } from './catalogo/catalogo.component';
+import { UsersComponent } from './admin/users/users.component';
+import { FormComponent } from './client/form/form.component';
+import { FormCatalogoComponent } from './admin/form-catalogo/form-catalogo.component';
 
 const routes: Routes =[
     { path: 'user-profile',     component: ProfileComponent },
@@ -22,11 +23,12 @@ const routes: Routes =[
     { path: 'login',          component: LoginComponent },
     { path: 'servicesproducts',          component: ServicesProductComponent },
     { path: 'client/orders/:id',          component: OrdersComponentClient },
+    { path: 'client/createorders/:id',          component: FormComponent },
     { path: 'client/:id',          component: ClientComponent },
     { path: 'admin/orders',          component: orderAdmin },
+    { path: 'admin/formcatalogo',          component: FormCatalogoComponent },
     { path: 'admin/users',          component: UsersComponent },
     { path: 'admin',          component: AdminComponent },
-    { path: 'catalogo', component: CatalogoComponent },
     { path: '', redirectTo: 'landing', pathMatch: 'full' }
 ];
 

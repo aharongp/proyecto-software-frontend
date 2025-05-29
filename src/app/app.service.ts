@@ -18,12 +18,19 @@ export class AppService {
     return this.http.get(this.url + 'users')
   }
 
+  getAllpages() {
+    return this.http.get(this.url + 'catalogo')
+  }
+
   getAllOrders() {
     return this.http.get(this.url + 'orders')
   }
 
   getOrdersById(id: any) {
     return this.http.get(this.url + 'orders/' + id)
+  }
+  deletePageById(id: any) {
+    return this.http.delete(this.url + 'catalogo/' + id)
   }
 
   postOrder(title: string, description: string, img: string, clientId: number, typeOrder: string,) {
@@ -37,6 +44,15 @@ export class AppService {
       console.error('hay un error: ', error);
     }
   }
+  postPage(titulo: string, description: string, url: string) {
+    const orderData = { titulo: titulo, description: description,  url: url}
+    try {
+      return this.http.post(this.url + 'catalogo/create', orderData )
+    } catch (error){
+      console.error('hay un error: ', error);
+    }
+  }
+
 
   login(email: string, password: string) {
     const loginData = { email, password };

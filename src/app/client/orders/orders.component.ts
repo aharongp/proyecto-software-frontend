@@ -17,7 +17,6 @@ export class OrdersComponentClient {
    }
 
   ngOnInit():void {
-
     this.getorders();
   }
 
@@ -27,4 +26,6 @@ export class OrdersComponentClient {
       console.log(this.orders)
     })
   }
+
+
 }

@@ -1,3 +1,25 @@
 <app-admin-nav></app-admin-nav>
-<app-orders-admin></app-orders-admin>
+<body>
+    <section class="section section-lg  pt-lg-0 ">
+    <div class="container">
+      <div class=" justify-content-center">
+          <div *ngFor="let page of pages" class="">
+              <div  class="card card-lift--hover shadow border-0 mt-5 mb-2">
+                <div class="card-body py-5">
+                  <h6 class="text-primary text-uppercase">{{ page.titulo}}</h6>
+                  <p class="description mt-3">{{page.description}}</p>
+                  <a href="{{page.url}}" fragment="corp" class="btn btn-primary mt-4">Visitar sitio</a>
+                  <form (ngSubmit)="deletePage(page.id)" action="submit">
+                    <button  type="submit" class="btn btn-danger mt-4" style="cursor: pointer;">
+                      <span>ELIMINAR</span>
+                    </button>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+  </section>
+</body>
 <app-users></app-users>

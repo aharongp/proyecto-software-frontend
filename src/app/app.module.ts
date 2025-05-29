@@ -21,7 +21,8 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminNavComponent } from './shared/admin-nav/admin-nav.component';
 import { ClientNavComponent } from './shared/client-nav/client-nav.component';
 import { OrdersComponentAdmin } from './admin/orders/orders.component';
-import { CatalogoComponent } from './catalogo/catalogo.component';
+import { FormComponent } from './client/form/form.component';
+import { FormCatalogoComponent } from './admin/form-catalogo/form-catalogo.component';
 
 
 @NgModule({
@@ -40,7 +41,9 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
     AdminNavComponent,
     ClientNavComponent,
     OrdersComponentAdmin,
-    CatalogoComponent
+    FormComponent,
+    FormCatalogoComponent,
+
   ],
   imports: [
     BrowserModule,

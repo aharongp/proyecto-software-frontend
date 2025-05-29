@@ -7,20 +7,23 @@ import { AppService } from '../app.service';
   styleUrls: ['./client.component.css']
 })
 export class ClientComponent {
-  title:string;
-  typeOrder: string;
-  img: string;
-  description: string;
-  clientId: string;
+  pages: any = [];
+  userId: any;
+  userName: string;
 
   constructor(private appService: AppService) {
-    this.clientId = localStorage.getItem('userId');
+    this.userId = localStorage.getItem('userId');
+    this.userName = localStorage.getItem('userName');
    }
 
+  ngOnInit():void {
+    this.getpages();
+  }
 
-  postOrder() {
-    this.appService.postOrder(this.title, this.description, this.img, +this.clientId, this.typeOrder).subscribe(data => {
+  getpages() {
+    this.appService.getAllpages().subscribe(data => {
+      this.pages = data;
       console.log(data)
-    });
+    })
   }
 }

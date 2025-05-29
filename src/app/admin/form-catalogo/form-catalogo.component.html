@@ -1,0 +1,18 @@
+<app-admin-nav></app-admin-nav>
+<body>
+  <div class="">
+      <div class="mt-5 ">
+          <h2 class="text-center">publicar sitio web</h2>
+      </div>
+      <form class="form" (ngSubmit)="postPage()">
+          <input for="titlte" id="tittle" [(ngModel)]="titulo" class="form-control" type="text" placeholder="Titulo del pedido" aria-label="readonly input example">
+          <input for="description" id="description" [(ngModel)]="description" class="form-control" type="text" placeholder="descripcion completa" aria-label="readonly input example">
+          <input for="img" id="img" [(ngModel)]="url" class="form-control" type="text" placeholder="Url" aria-label="readonly input example">
+
+          <button type="submit" class="checkout" style="cursor: pointer;">
+            <span>ENVIAR</span>
+          </button>
+      </form>
+  </div>
+</body>
+

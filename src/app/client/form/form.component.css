@@ -1,42 +1,13 @@
-@import  "../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-
-
-
-.margin {
-  margin-top: 10vh;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300&display=swap');
 body{
-    height: 100vh;
+  height: 100vh;
   overflow: hidden;
-  background-image: conic-gradient(from 270deg at 30%, #e9b362, #c8cbcc, #5c3c97);
+  background-image: conic-gradient(from 90deg at 70%, #e9b362, #c8cbcc, #5c3c97);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Poppins";
 }
-
-.card {
-  width: 100%;
-  max-width: 500px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#chatear{
-    color: #804726;
-    text-align: center;
-}
-#chatear:hover{
-    color: #000000;
-}
-
-.card-header{
-    text-align: center;
-}
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300&display=swap');
-
 .contenedor{
     position: relative;
 }
