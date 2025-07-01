@@ -23,6 +23,7 @@ import { ClientNavComponent } from './shared/client-nav/client-nav.component';
 import { OrdersComponentAdmin } from './admin/orders/orders.component';
 import { FormComponent } from './client/form/form.component';
 import { FormCatalogoComponent } from './admin/form-catalogo/form-catalogo.component';
+import { ChatComponent } from './client/chat/chat.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { FormCatalogoComponent } from './admin/form-catalogo/form-catalogo.compo
     OrdersComponentAdmin,
     FormComponent,
     FormCatalogoComponent,
+    ChatComponent
 
   ],
   imports: [
