@@ -14,13 +14,20 @@
             <br>
             {{ order.description }}
           </li>
-
+          <li class="list-group-item">
+            <strong>estado:</strong>
+            <br>
+            {{ order.state }}
+          </li>
           <li class="list-group-item">
             <strong>client id:</strong>
             {{ order.clientId }}
           </li>
+
           <li style="align-content: center;">____________________</li>
+          <button *ngIf="order.state !== 'Completado'" class="btn btn-success" (click)="updateState(order.id, order.state)">Cambiar estado</button>
           <button class="btn btn-danger" (click)="deleteOrder(order.id)">Eliminar orden</button>
+
         </ul>
       </div>
       <!--

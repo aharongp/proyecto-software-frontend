@@ -41,7 +41,7 @@ export class AppService {
   }
 
   postOrder(title: string, description: string, img: string, clientId: number, typeOrder: string,) {
-    const orderData = { title: title, description: description,  img: img, clientId: clientId, typeOrder: typeOrder, }
+    const orderData = { title: title, description: description, state:"Pendiente",  img: img, clientId: clientId, typeOrder: typeOrder, }
     try {
       console.log(typeOrder);
       return this.http.post(this.url + 'orders/create', orderData )
@@ -64,6 +64,15 @@ export class AppService {
     const pageData = { titulo, description, url };
     try {
       return this.http.patch(this.url + 'catalogo/' + id, pageData);
+    } catch (error) {
+      console.error('hay un error: ', error);
+    }
+  }
+
+  updateOrder(id:string, state: string) {
+    const pageData = { state };
+    try {
+      return this.http.patch(this.url + 'orders/' + id, pageData);
     } catch (error) {
       console.error('hay un error: ', error);
     }

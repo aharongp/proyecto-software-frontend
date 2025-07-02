@@ -25,6 +25,22 @@ export class OrdersComponentAdmin {
     })
   }
 
+  updateState(id: string, state: string) {
+    if (state === 'Pendiente') {
+      state = 'En Proceso';
+    } else if (state === 'En Proceso') {
+      state = 'Completado';
+    }
+
+    this.appService.updateOrder(id, state).subscribe(response => {
+      console.log('Estado actualizado:', response);
+      this.getorders();
+    }, error => {
+      console.error('Error al actualizar el estado:', error);
+    });
+
+  }
+
   deleteOrder(id: string) {
     this.appService.deleteOrderById(id).subscribe(response => {
       console.log('Orden eliminada:', response);
