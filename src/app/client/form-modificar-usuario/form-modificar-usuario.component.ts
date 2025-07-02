@@ -3,16 +3,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AppService } from 'src/app/app.service';
 
 @Component({
-  selector: 'app-form-modificar-usuario',
+  selector: 'app-form-modificar-usuario-client',
   templateUrl: './form-modificar-usuario.component.html',
   styleUrls: ['./form-modificar-usuario.component.css']
 })
-export class FormModificarUsuarioComponent implements OnInit {
+export class FormModificarUsuarioClientComponent implements OnInit {
   id: string;
   nombre: string;
   email: string;
-  rolId: number;
-  password: string = ''; // Nuevo campo para la contraseña
+  password: string = '';
 
   constructor(
     private appService: AppService,
@@ -26,16 +25,16 @@ export class FormModificarUsuarioComponent implements OnInit {
       this.appService.getUserById(this.id).subscribe((data: any) => {
         this.nombre = data.nombre;
         this.email = data.email;
-        this.rolId = data.rolId;
         this.password = data.password;
         // Por seguridad, no se obtiene la contraseña actual
       });
     });
   }
 
+
   updateUsuario() {
-    this.appService.updateUsuario(this.id, this.nombre, this.email, this.rolId, this.password).subscribe(data => {
-      this.router.navigate(['/admin']);
+    this.appService.updateUsuario(this.id, this.nombre, this.email, undefined, this.password).subscribe(data => {
+      this.router.navigate(['/client']);
     });
   }
-} 
+}

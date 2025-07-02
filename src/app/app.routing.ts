@@ -3,11 +3,9 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
-import { ServicesProductComponent } from './services-product/services-product.component';
 import { OrdersComponentClient } from './client/orders/orders.component';
 import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
@@ -18,13 +16,12 @@ import { FormCatalogoComponent } from './admin/form-catalogo/form-catalogo.compo
 import { ChatComponent } from './client/chat/chat.component';
 import { FormModificarCatalogoComponent } from './admin/form-modificar-catalogo/form-catalogo.component';
 import { FormModificarUsuarioComponent } from './admin/form-modificar-usuario/form-modificar-usuario.component';
+import { FormModificarUsuarioClientComponent } from './client/form-modificar-usuario/form-modificar-usuario.component';
 
 const routes: Routes =[
-    { path: 'user-profile',     component: ProfileComponent },
     { path: 'register',           component: SignupComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'login',          component: LoginComponent },
-    { path: 'servicesproducts',          component: ServicesProductComponent },
     { path: 'client/orders/:id',          component: OrdersComponentClient },
     { path: 'client/createorders/:id',          component: FormComponent },
     { path: 'client/:id',          component: ClientComponent },
@@ -36,6 +33,7 @@ const routes: Routes =[
     { path: 'client/chat/:room',          component: ChatComponent },
     { path: 'admin/actualizarcatalogo/:id',          component: FormModificarCatalogoComponent },
     { path: 'admin/actualizarusuario/:id', component: FormModificarUsuarioComponent },
+    { path: 'client/modificarusuario/:id', component: FormModificarUsuarioClientComponent },
 
 
 ];

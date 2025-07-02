@@ -7,7 +7,7 @@
       <form class="form" (ngSubmit)="updateUsuario()">         
           <input name="email" id="email" [(ngModel)]="email" class="form-control" type="email" placeholder="Correo electrónico" required>
           
-          <input name="password" id="password" [(ngModel)]="password" class="form-control" type="password" placeholder="Contraseña" required minlength="6">          
+          <input name="password" id="password" [(ngModel)]="password" class="form-control" type="password" placeholder="Nueva contraseña" required minlength="6">          
           <select name="rolId" id="rolId" [(ngModel)]="rolId" class="form-control" required>
             <option [ngValue]="1">Admin</option>
             <option [ngValue]="2">Cliente</option>

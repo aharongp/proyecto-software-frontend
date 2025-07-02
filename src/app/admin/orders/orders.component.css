@@ -38,3 +38,7 @@ body{
   margin-top: 1vh;
   margin-left: 5vh;
 }
+
+li {
+  list-style-type: none;
+}
