@@ -10,7 +10,7 @@
           <li class="list-group-item"><strong>{{ user.email }}</strong></li>
           <li class="list-group-item">role: {{ user.rolId }}</li>
           <li class="list-group-item"> <a [routerLink]="['/client/chat', user.username]">chatear</a></li>
-          <button (click)="deleteUser(user.id)">Eliminar usuario</button>
+          <button *ngIf="user.rolId == 2" (click)="deleteUser(user.id)">Eliminar usuario</button>
         </ul>
       </div>
     </div>
