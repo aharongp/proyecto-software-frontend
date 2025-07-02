@@ -24,6 +24,7 @@ import { OrdersComponentAdmin } from './admin/orders/orders.component';
 import { FormComponent } from './client/form/form.component';
 import { FormCatalogoComponent } from './admin/form-catalogo/form-catalogo.component';
 import { ChatComponent } from './client/chat/chat.component';
+import { FormModificarCatalogoComponent } from './admin/form-modificar-catalogo/form-catalogo.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ChatComponent } from './client/chat/chat.component';
     OrdersComponentAdmin,
     FormComponent,
     FormCatalogoComponent,
-    ChatComponent
+    ChatComponent,
+    FormModificarCatalogoComponent
 
   ],
   imports: [

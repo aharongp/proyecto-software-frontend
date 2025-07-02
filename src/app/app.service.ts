@@ -32,6 +32,9 @@ export class AppService {
   deletePageById(id: any) {
     return this.http.delete(this.url + 'catalogo/' + id)
   }
+  buscarPagina(id: any) {
+    return this.http.get(this.url + 'catalogo/' + id);
+  }
 
   postOrder(title: string, description: string, img: string, clientId: number, typeOrder: string,) {
     const orderData = { title: title, description: description,  img: img, clientId: clientId, typeOrder: typeOrder, }
@@ -53,6 +56,14 @@ export class AppService {
     }
   }
 
+  updatePage(id: string, titulo: string, description: string, url: string) {
+    const pageData = { titulo, description, url };
+    try {
+      return this.http.patch(this.url + 'catalogo/' + id, pageData);
+    } catch (error) {
+      console.error('hay un error: ', error);
+    }
+  }
 
   login(email: string, password: string) {
     const loginData = { email, password };

@@ -16,6 +16,7 @@ import { UsersComponent } from './admin/users/users.component';
 import { FormComponent } from './client/form/form.component';
 import { FormCatalogoComponent } from './admin/form-catalogo/form-catalogo.component';
 import { ChatComponent } from './client/chat/chat.component';
+import { FormModificarCatalogoComponent } from './admin/form-modificar-catalogo/form-catalogo.component';
 
 const routes: Routes =[
     { path: 'user-profile',     component: ProfileComponent },
@@ -32,6 +33,7 @@ const routes: Routes =[
     { path: 'admin',          component: AdminComponent },
     { path: '', redirectTo: 'landing', pathMatch: 'full' },
     { path: 'client/chat/:room',          component: ChatComponent },
+    { path: 'admin/actualizarcatalogo/:id',          component: FormModificarCatalogoComponent },
 
 ];
 

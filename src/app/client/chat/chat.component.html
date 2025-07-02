@@ -1,13 +1,15 @@
-
 <body class="bg-gradient-default">
+  <div>
+    <div *ngIf="roleID == '1'">
+      <app-admin-nav></app-admin-nav>
+    </div>
+
+    <div *ngIf="roleID == '2'">
+      <app-client-nav></app-client-nav>
+    </div>
+  </div>
   <section class="section section-shaped">
     <div class="container margin">
-        <li class="nav-item dropdown">
-          <a class="nav-link no-caret"  data-toggle="dropdown" role="button" [routerLink]="['/admin']">
-            <i class="ni ni-ui-04 d-lg-none"></i>
-            <span class="nav-link-inner--text">Inicio</span>
-          </a>
-        </li>
         <div class="chat">
           <div class="chat-container">
             <div class="messages-container text-light">
@@ -30,6 +32,7 @@
             </div>
           </div>
         </div>
+
     </div>
   </section>
 </body>

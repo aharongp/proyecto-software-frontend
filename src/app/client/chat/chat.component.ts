@@ -10,6 +10,7 @@ import { AppSocketService } from 'src/app/app.socket.service';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements OnInit, OnDestroy {
+  roleID: string = localStorage.getItem('rolId');
 
   room: string;
   constructor(
@@ -18,11 +19,9 @@ export class ChatComponent implements OnInit, OnDestroy {
     private socketWebService: AppSocketService
 
   ) {
-
     this.socketWebService.outEven.subscribe( res => {
       this.join()
     })
-
 
    }
 
@@ -40,6 +39,8 @@ export class ChatComponent implements OnInit, OnDestroy {
     this.route.paramMap.subscribe(params => {
       this.room = params.get('room');
       this.cookieService.set('room', this.room);
+
+      this.socketWebService.reconnectToRoom(this.room);
 
       // Limpia el estado y listeners anteriores
       this.messages = [];
@@ -96,6 +97,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     // Salir de la sala en el backend
     this.socketWebService.emit('leave', { room: this.room, name: this.name });
+    this.cookieService.delete('room');
 
     this.messages = [];
     this.messageText = '';
@@ -103,7 +105,6 @@ export class ChatComponent implements OnInit, OnDestroy {
     this.name = '';
     this.typingDisplay = '';
 
-    // Quita los listeners para evitar duplicados y fugas de memoria
     this.socketWebService.off('message', this.messageHandler);
     this.socketWebService.off('typing', this.typingHandler);
   }

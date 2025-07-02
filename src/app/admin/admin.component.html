@@ -13,7 +13,11 @@
                     <button  type="submit" class="btn btn-danger mt-4" style="cursor: pointer;">
                       <span>ELIMINAR</span>
                     </button>
-
+                  </form>
+                  <form (ngSubmit)="actualizarPage(page.id)" action="submit">
+                    <button  type="submit" class="btn btn-success mt-4" style="cursor: pointer;">
+                      <span>Actualizar</span>
+                    </button>
                   </form>
                 </div>
               </div>
@@ -22,4 +26,3 @@
       </div>
   </section>
 </body>
-<app-users></app-users>

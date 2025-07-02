@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AppService } from '../app.service';
+import { Router } from '@angular/router'; // <-- importa Router
 
 @Component({
   selector: 'app-admin',
@@ -11,7 +12,10 @@ export class AdminComponent {
   userId: any;
   userName: string;
 
-  constructor(private appService: AppService) {
+  constructor(
+    private appService: AppService,
+    private router: Router // <-- inyecta Router
+  ) {
     this.userId = localStorage.getItem('userId');
     this.userName = localStorage.getItem('userName');
    }
@@ -25,6 +29,10 @@ export class AdminComponent {
       this.pages = data;
       console.log(data)
     })
+  }
+
+  actualizarPage(id: string) {
+    this.router.navigate(['/admin/actualizarcatalogo', id]);
   }
 
   deletePage(id:string){

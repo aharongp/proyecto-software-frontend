@@ -33,4 +33,10 @@ export class AppSocketService extends Socket {
     this.ioSocket.emit('message', payload)
 
   }
+
+  reconnectToRoom(room: string) {
+    this.ioSocket.io.opts.query = { nameRoom: room };
+    this.ioSocket.disconnect();
+    this.ioSocket.connect();
+  }
 }
