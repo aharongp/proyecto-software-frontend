@@ -9,6 +9,7 @@ import { Router } from '@angular/router'; // <-- importa Router
 })
 export class AdminComponent {
   pages: any = [];
+  users: any = [];
   userId: any;
   userName: string;
 
@@ -20,9 +21,10 @@ export class AdminComponent {
     this.userName = localStorage.getItem('userName');
    }
 
-  ngOnInit():void {
-    this.getpages();
-  }
+  ngOnInit(): void {
+  this.getUsers();
+  this.getpages();
+}
 
   getpages() {
     this.appService.getAllpages().subscribe(data => {
@@ -44,6 +46,23 @@ export class AdminComponent {
         });
     }, error => {
         console.error('Error al eliminar la página:', error);
+    });
+  }
+
+  deleteUser(id: string) {
+    this.appService.deleteUserById(id).subscribe(response => {
+      console.log('Usuario eliminado:', response);
+      // Recarga la lista de usuarios después de eliminar
+      this.getUsers();
+    }, error => {
+      console.error('Error al eliminar el usuario:', error);
+    });
+  }
+
+  getUsers() {
+    this.appService.getAllusers().subscribe(data => {
+      this.users = data;
+      console.log(data);
     });
   }
 }

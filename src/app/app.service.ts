@@ -99,4 +99,8 @@ export class AppService {
     }
     return res
   }
+
+  deleteUserById(id: any) {
+  return this.http.delete(this.url + 'users/' + id);
+}
 }
