@@ -1,5 +1,8 @@
 <nav id="navbar-main" class="bg-gradient-transparent navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned" #navbar>
   <div class="container ">
+    <a class="navbar-brand mr-lg-5" [routerLink]="['/admin']">
+      <img src="./assets/img/brand/easyweb-lite.png" width="100">
+    </a>
     <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
           [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
       <span class="navbar-toggler-icon"></span>
