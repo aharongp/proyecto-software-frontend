@@ -1,7 +1,7 @@
 <app-client-nav></app-client-nav>
 <body>
-  <div class="margin" style="display: flex; flex-wrap: wrap;">
-    <div *ngFor="let order of orders" style="margin: 10px;">
+  <div class="margin" style="display: flex; flex-wrap: wrap; ">
+    <div *ngFor="let order of orders" style="margin: 10px; align-content: center;">
       <div class="card" style="width: 18rem;">
         <div class="card-header">
           order #{{ order.id }}: {{ order.title }}
@@ -22,6 +22,11 @@
 
         </ul>
       </div>
+        <ul class="eliminar">
+          <li class="list-group-item">
+            <button class="btn btn-danger" (click)="deleteOrder(order.id)">Eliminar orden</button>
+          </li>
+        </ul>
     </div>
   </div>
 </body>

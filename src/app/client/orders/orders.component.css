@@ -167,3 +167,7 @@ body{
   transform: scale(0.95);
 }
 
+.eliminar {
+  margin-top: 1vh;
+  margin-left: 5vh;
+}

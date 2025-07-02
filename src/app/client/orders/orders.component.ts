@@ -26,6 +26,14 @@ export class OrdersComponentClient {
       console.log(this.orders)
     })
   }
-
+  
+  deleteOrder(id: string) {
+    this.appService.deleteOrderById(id).subscribe(response => {
+      console.log('Orden eliminada:', response);
+      this.getorders();
+    }, error => {
+      console.error('Error al eliminar la orden:', error);
+    });
+  }
 
 }

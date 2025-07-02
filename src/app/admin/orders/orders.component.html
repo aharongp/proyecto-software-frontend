@@ -19,11 +19,13 @@
             <strong>client id:</strong>
             {{ order.clientId }}
           </li>
+        </ul>
+      </div>
+      <ul class="eliminar">
           <li class="list-group-item">
             <button class="btn btn-danger" (click)="deleteOrder(order.id)">Eliminar orden</button>
           </li>
-        </ul>
-      </div>
+      </ul>
     </div>
   </div>
 </body>

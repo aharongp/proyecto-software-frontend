@@ -33,3 +33,8 @@ body{
 .card-header{
     text-align: center;
 }
+
+.eliminar {
+  margin-top: 1vh;
+  margin-left: 5vh;
+}
