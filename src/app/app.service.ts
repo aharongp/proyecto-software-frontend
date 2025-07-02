@@ -103,4 +103,8 @@ export class AppService {
   deleteUserById(id: any) {
   return this.http.delete(this.url + 'users/' + id);
 }
+
+deleteOrderById(id: any) {
+  return this.http.delete(this.url + 'orders/' + id);
+}
 }
