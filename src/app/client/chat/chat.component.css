@@ -26,3 +26,7 @@
   padding-left: 3px;
   padding-right: 3px;
 }
+
+#chatview{
+    background-image: conic-gradient(from 180deg at 50%, #cca975, #c8cbcc, #8268b3);
+}

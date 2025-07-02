@@ -1,4 +1,4 @@
-<body class="bg-gradient-default">
+<body id="chatview">
   <div>
     <div *ngIf="roleID == '1'">
       <app-admin-nav></app-admin-nav>
@@ -24,9 +24,9 @@
             <div class="message-input">
               <form (ngSubmit)="sendMessage()">
                 <div class="row input-group">
-                  <label class="col-form-label">Message:</label>
+                  <label class="col-form-label">Mensaje: </label>
                   <input class="form-control" [(ngModel)]="messageText" name="messageText" (input)="emitTyping()">
-                  <button class="col-3 btn btn-success" type="submit">Send</button>
+                  <button class="col-3 btn btn-success" type="submit">Enviar</button>
                 </div>
               </form>
             </div>

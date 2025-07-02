@@ -1,6 +1,6 @@
 <nav id="navbar-main" class="bg-gradient-transparent navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned" #navbar>
   <div class="container ">
-    <a class="navbar-brand mr-lg-5" [routerLink]="['/admin']">
+    <a class="navbar-brand mr-lg-5" [routerLink]="['../landing']">
       <img src="./assets/img/brand/easyweb-lite.png" width="100">
     </a>
     <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
@@ -47,7 +47,7 @@
         <li class="nav-item dropdown">
           <a [routerLink]="['/admin/users']" class="nav-link no-caret" data-toggle="dropdown" role="button">
             <i class="ni ni-collection d-lg-none"></i>
-            <span class="nav-link-inner--text">usuarios</span>
+            <span class="nav-link-inner--text">Usuarios</span>
           </a>
         </li>
 
