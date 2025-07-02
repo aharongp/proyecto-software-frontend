@@ -37,3 +37,11 @@ body{
 .card-header{
     text-align: center;
 }
+
+#modi{
+width: 100%;
+}
+
+li {
+  list-style-type: none;
+}

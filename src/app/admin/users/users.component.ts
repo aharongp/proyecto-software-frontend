@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AppService } from 'src/app/app.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-users',
@@ -9,8 +11,7 @@ import { AppService } from 'src/app/app.service';
 export class UsersComponent {
   users: any = [];
   
-
-  constructor(private appService: AppService) { }
+  constructor(private appService: AppService, private router: Router) { }
 
   ngOnInit():void {
     this.getusers();
@@ -23,6 +24,9 @@ export class UsersComponent {
     })
   }
 
+  actualizarUser(id: string) {
+    this.router.navigate(['/admin/actualizarusuario', id]);
+  }
     deleteUser(id: string) {
     this.appService.deleteUserById(id).subscribe(response => {
       console.log('Usuario eliminado:', response);

@@ -18,6 +18,10 @@ export class AppService {
     return this.http.get(this.url + 'users')
   }
 
+  getUserById(id: any) {
+  return this.http.get(this.url + 'users/' + id);
+}
+
   getAllpages() {
     return this.http.get(this.url + 'catalogo')
   }
@@ -64,6 +68,15 @@ export class AppService {
       console.error('hay un error: ', error);
     }
   }
+
+  updateUsuario(id: string, nombre: string, email: string, rolId: number, password: string) {
+  const userData = { nombre, email, rolId, password };
+      try {
+      return this.http.patch(this.url + 'users/' + id, userData);
+    } catch (error) {
+      console.error('hay un error: ', error);
+    }
+}
 
   login(email: string, password: string) {
     const loginData = { email, password };

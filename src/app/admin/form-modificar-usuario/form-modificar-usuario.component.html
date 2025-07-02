@@ -1,0 +1,21 @@
+<app-admin-nav></app-admin-nav>
+<body>
+  <div class="">
+      <div class="mt-5 ">
+          <h2 class="text-center">Modificar Usuario</h2>
+      </div>
+      <form class="form" (ngSubmit)="updateUsuario()">         
+          <input name="email" id="email" [(ngModel)]="email" class="form-control" type="email" placeholder="Correo electrónico" required>
+          
+          <input name="password" id="password" [(ngModel)]="password" class="form-control" type="password" placeholder="Contraseña" required minlength="6">          
+          <select name="rolId" id="rolId" [(ngModel)]="rolId" class="form-control" required>
+            <option [ngValue]="1">Admin</option>
+            <option [ngValue]="2">Cliente</option>
+          </select>
+
+          <button type="submit" class="checkout" style="cursor: pointer;">
+            <span>ENVIAR</span>
+          </button>
+      </form>
+  </div>
+</body>

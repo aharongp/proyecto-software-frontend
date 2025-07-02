@@ -25,6 +25,8 @@ import { FormComponent } from './client/form/form.component';
 import { FormCatalogoComponent } from './admin/form-catalogo/form-catalogo.component';
 import { ChatComponent } from './client/chat/chat.component';
 import { FormModificarCatalogoComponent } from './admin/form-modificar-catalogo/form-catalogo.component';
+import { FormModificarUsuarioComponent } from './admin/form-modificar-usuario/form-modificar-usuario.component';
+
 
 
 @NgModule({
@@ -46,7 +48,8 @@ import { FormModificarCatalogoComponent } from './admin/form-modificar-catalogo/
     FormComponent,
     FormCatalogoComponent,
     ChatComponent,
-    FormModificarCatalogoComponent
+    FormModificarCatalogoComponent,
+    FormModificarUsuarioComponent,
 
   ],
   imports: [
