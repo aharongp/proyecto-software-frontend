@@ -15,6 +15,7 @@ import { OrdersComponentAdmin  as orderAdmin} from './admin/orders/orders.compon
 import { UsersComponent } from './admin/users/users.component';
 import { FormComponent } from './client/form/form.component';
 import { FormCatalogoComponent } from './admin/form-catalogo/form-catalogo.component';
+import { ChatComponent } from './client/chat/chat.component';
 
 const routes: Routes =[
     { path: 'user-profile',     component: ProfileComponent },
@@ -29,7 +30,9 @@ const routes: Routes =[
     { path: 'admin/formcatalogo',          component: FormCatalogoComponent },
     { path: 'admin/users',          component: UsersComponent },
     { path: 'admin',          component: AdminComponent },
-    { path: '', redirectTo: 'landing', pathMatch: 'full' }
+    { path: '', redirectTo: 'landing', pathMatch: 'full' },
+    { path: 'client/chat/:room',          component: ChatComponent },
+
 ];
 
 @NgModule({
@@ -37,7 +40,8 @@ const routes: Routes =[
     CommonModule,
     BrowserModule,
     RouterModule.forRoot(routes,{
-      useHash: true
+      useHash: true,
+      onSameUrlNavigation: 'reload'
     })
   ],
   exports: [

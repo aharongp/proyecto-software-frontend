@@ -2,16 +2,13 @@
 <body class="bg-gradient-default">
   <section class="section section-shaped">
     <div class="container margin">
+        <li class="nav-item dropdown">
+          <a class="nav-link no-caret"  data-toggle="dropdown" role="button" [routerLink]="['/admin']">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text">Inicio</span>
+          </a>
+        </li>
         <div class="chat">
-          <div *ngIf="!joined">
-            <form (ngSubmit)="join()">
-              <div class="row input-group">
-                <label class=" col-form-label ">Username: </label>
-                <input class="form-control" type="text" [(ngModel)]="name" name="name" required>
-                <button type="submit" class="col-3 btn btn-primary">Send</button>
-              </div>
-            </form>
-          </div>
           <div class="chat-container">
             <div class="messages-container text-light">
               <div *ngFor="let message of messages" [key]="message.id">

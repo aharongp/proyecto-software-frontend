@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 
@@ -9,7 +9,7 @@ import { AppSocketService } from 'src/app/app.socket.service';
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css']
 })
-export class ChatComponent implements OnInit {
+export class ChatComponent implements OnInit, OnDestroy {
 
   room: string;
   constructor(
@@ -18,9 +18,12 @@ export class ChatComponent implements OnInit {
     private socketWebService: AppSocketService
 
   ) {
+
     this.socketWebService.outEven.subscribe( res => {
       this.join()
     })
+
+
    }
 
   messages: any[] = [];
@@ -29,24 +32,42 @@ export class ChatComponent implements OnInit {
   name = '';
   typingDisplay = '';
 
+  messageHandler: any;
+  typingHandler: any;
+
   ngOnInit() {
-    this.room = this.route.snapshot.paramMap.get('room');
-    this.cookieService.set('room', this.room)
+    this.name = localStorage.getItem('userName');
+    this.route.paramMap.subscribe(params => {
+      this.room = params.get('room');
+      this.cookieService.set('room', this.room);
 
-    this.socketWebService.emit('findAllMessages', {}, (res: any) => {
-      this.messages = res;
-    });
-
-    this.socketWebService.on('message', (msg: any) => {
-      this.messages.push(msg);
-    });
-
-    this.socketWebService.on('typing', ({ name, isTyping }) => {
-      if (isTyping) {
-        this.typingDisplay = `${name} is typing...`;
-      } else {
-        this.typingDisplay = '';
+      // Limpia el estado y listeners anteriores
+      this.messages = [];
+      this.messageText = '';
+      this.typingDisplay = '';
+      if (this.messageHandler) {
+        this.socketWebService.off('message', this.messageHandler);
       }
+      if (this.typingHandler) {
+        this.socketWebService.off('typing', this.typingHandler);
+      }
+
+      // Vuelve a suscribirte y pedir mensajes de la nueva sala
+      this.messageHandler = (msg: any) => {
+        this.messages.push(msg);
+      };
+      this.typingHandler = ({ name, isTyping }) => {
+        this.typingDisplay = isTyping ? `${name} is typing...` : '';
+      };
+      this.socketWebService.on('message', this.messageHandler);
+      this.socketWebService.on('typing', this.typingHandler);
+
+      this.socketWebService.emit('findAllMessages', {}, (res: any) => {
+        this.messages = res;
+      });
+      this.socketWebService.emit('join', { name: this.name }, () => {
+        this.joined = true;
+      });
     });
   }
 
@@ -70,5 +91,20 @@ export class ChatComponent implements OnInit {
     this.timeout = setTimeout(() => {
       this.socketWebService.emit('typing', { isTyping: false });
     }, 2000);
+  }
+
+  ngOnDestroy() {
+    // Salir de la sala en el backend
+    this.socketWebService.emit('leave', { room: this.room, name: this.name });
+
+    this.messages = [];
+    this.messageText = '';
+    this.joined = false;
+    this.name = '';
+    this.typingDisplay = '';
+
+    // Quita los listeners para evitar duplicados y fugas de memoria
+    this.socketWebService.off('message', this.messageHandler);
+    this.socketWebService.off('typing', this.typingHandler);
   }
 }
