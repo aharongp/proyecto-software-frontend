@@ -13,12 +13,13 @@ export class FormModificarUsuarioComponent implements OnInit {
   email: string;
   rolId: number;
   password: string = ''; // Nuevo campo para la contraseña
+  clientID: string;
 
   constructor(
     private appService: AppService,
     private route: ActivatedRoute,
     private router: Router
-  ) {}
+  ) {this.clientID = localStorage.getItem('userId');}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -35,7 +36,12 @@ export class FormModificarUsuarioComponent implements OnInit {
 
   updateUsuario() {
     this.appService.updateUsuario(this.id, this.nombre, this.email, this.rolId, this.password).subscribe(data => {
-      this.router.navigate(['/admin']);
+      if(this.id === this.clientID) {
+        this.router.navigate(['/landing']);
+      }
+      else {
+        this.router.navigate(['/admin']);
+      }
     });
   }
 } 

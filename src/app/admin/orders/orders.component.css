@@ -42,3 +42,7 @@ body{
 li {
   list-style-type: none;
 }
+
+#ordenes{
+    width: 100%;
+}
